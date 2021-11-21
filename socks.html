@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    console.log('hello');
+    const n = 9;
+    const ar = [10, 20, 20, 10, 10, 30, 50, 10, 20];
+
+    function matchSocks(n, ar){
+        let pairs = 0;
+        let socks = {};
+        ar.forEach(sock => {
+            if(!socks[sock]){
+                socks[sock] = 0; 
+                console.log(socks)
+            }
+            socks[sock] = socks[sock] + 1;
+            if(socks[sock] % 2 === 0){
+                pairs++;
+            }
+        });
+        return console.log(pairs);
+
+    }
+
+
+    matchSocks(n, ar);
+
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    const path = "DUDDUUDU";
+    const steps = 8; 
+    //const path = pathString.split('');
+
+
+    function countingVallets(steps, path){
+        let count = 1;
+        let valleys = 0;
+        let level = 0;
+        for (const step of path) {
+            let prev = level;
+            level = step === 'U' ? level + 1 :  level - 1; 
+            if(prev == -1 && level == 0) valleys++; 
+            console.log(`${count++} - Valleys: ${valleys} || Prev: ${prev === 0 ? prev = ' 0' : prev = prev} || Levels: ${level===0 ? level = ' 0': level}`)
+        }
+        
+        console.log(valleys);
+    }
+    
+    countingVallets(steps, path);
+
+</script>
+
+<!-- const pathArr = path.split('')
+    .map(function(char){
+        if(char === 'U'){
+           return char = '/'
+        }else{
+           return char = '\\'
+        }
+    }).join('');
+d -->

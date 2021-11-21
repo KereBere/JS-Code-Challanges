@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+
+let nums = [ 8, 2, 5, 4, 6]; 
+let nums1 = [ 8, 2, 6, 8, 5]; 
+let numsOdd = [ 3,5,1,7,9,8]; 
+
+function findOutlier(integers){
+
+    let tempCount = 0;
+    for(let i = 0; i < integers.length; i++){
+        if( integers[i] % 2 === 0 ){
+            tempCount++;
+        }
+        else{
+            tempCount--;
+        }
+    } 
+    if(tempCount > 0 ){
+        for(let i = 0; i < integers.length; i++){
+            if(integers[i] % 2 !==0){
+                return integers[i];
+            }
+        }
+    }else{
+        for(let i = 0; i < integers.length; i++){
+            if(integers[i] % 2 ===0){
+                return integers[i];
+            }
+        }
+    }   
+}
+
+console.log(findOutlier(numsOdd));
+
+
+function findTheNum(num){
+    let even = nums.filter(a => a % 2 === 0);
+    let odd = nums.filter(a => a % 2 !== 0);
+
+    return even.length == 1 ? even[0] : odd[0];
+}
+
+
+console.log(findTheNum(nums));
+
+</script>
+
+let even = integers.filter(e => e % 2 !== 0 );
+let odd = integers.filter(o => o % 2 === 0);
+      
+return even.length > 1 ? odd[0] : even[0]
+}

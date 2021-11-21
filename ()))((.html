@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+function duplicateEncode(word){
+  let wordArray = word.toLowerCase().split('');
+  let object = {};
+  wordArray.forEach((char, index)=>{
+      let letter = wordArray[index];
+      if(object[letter] === undefined){
+            object[letter] = 1
+      }else{
+          object[letter] += 1
+      }
+  }); 
+  let final = wordArray.map(function(x){
+      return object[x] === 1 ? '(' : ')'
+  }).join('');
+//   console.log(wordArray)
+//   console.log(object)
+//   console.log(final)
+}
+const word = 'alara';
+duplicateEncode(word);
+
+
+const abra = 'abracadabra';
+function countVowels(word){
+    let vowelCount = 0;
+    let arr = word.split('');
+
+    for(let i = 0; i < arr.length; i++){
+        if(word[i] === 'a'){
+            vowelCount++;
+        }
+    }
+    console.log(vowelCount)
+}
+countVowels(abra);
+
+console.log(abra.match(/[aeiou]/gi).length);
+</script>
+
