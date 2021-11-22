@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let gradesArr = [73, 67, 38, 33];
+
+    function gradingStudents(grades) {
+        let resultArr = []
+        grades.map(num => {
+            if (num < 38) {
+                resultArr.push(num)
+            } else if (num % 5 == 3) {
+                resultArr.push(num + 2)
+            } else {
+                resultArr.push(num)
+            }
+        })
+        return resultArr;
+    }
+
+
+    gradingStudents(gradesArr)
+
+
+
+
+
+
+
+</script>
